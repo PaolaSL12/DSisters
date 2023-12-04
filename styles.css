@@ -1,0 +1,393 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: var(--ds-text-color);
+}
+
+ul {
+    list-style: none;
+}
+
+:root {
+    --ds-color-1: #e1e1e1;
+    --ds-color-2: #9e2496;
+    --ds-color-3: #000000;
+    --ds-color-4: #ffffff;
+    --ds-color-5: #5e5e5e;
+    --ds-color-6: #f9f9f9;
+
+    --ds-background:var(--ds-color-6);
+    --ds-background-secondary:var(--ds-color-1);
+
+    --ds-text-color:var(--ds-color-5);
+    --ds-title-color:var(--ds-color-2);
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--ds-background);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--ds-background-secondary);
+}
+nav {
+    display: flex;
+    align-items: center;
+    width: 70%;
+}
+
+nav > ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+li > a:hover {
+    color: var(--ds-title-color);
+}
+
+.menu {
+   width: 40px;
+   display: none;
+   cursor: pointer;
+}
+
+.menu > img {
+    width: 100%;
+}
+
+#checkbox {
+    display: none;
+}
+#checkbox:checked ~ nav {
+    display: flex;
+
+}
+
+.team {
+    width: 100%;
+}
+
+.team > img {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto 0 auto;
+}
+
+.bePart {
+ width: 100%;
+ height: 40vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.bePart > h2 {
+    width: 30%;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 300;
+    color: var(--ds-title-color);
+   }
+
+.hero {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.hero > div > img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.hero > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero > div > p {
+    font-weight: lighter;
+    color: var(--ds-text-color);
+    text-align: center;
+}
+
+.logo {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo > img {
+    max-height: 200px;
+    margin: 30px;
+}
+
+.aboutUs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+.aboutUs > h2 {
+    color: var(--ds-title-color);
+    font-size: 2.5em;
+    font-weight: 300;
+    text-align: center;
+    padding: 40px;
+}
+
+.aboutUs > p {
+    color: var(--ds-text-color);
+    font-size: 0.9em;
+    width: 70%;
+    text-align: center;
+    padding: 20px;
+}
+
+.ourClasses {
+ width: 100%;
+ display: flex;
+}
+
+.ourClasses > div {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--ds-background-secondary);
+}
+
+.ourClasses > .dancer {
+    background-color: #000000;
+}
+
+.ourClasses > div > img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.ourClasses > .classes {
+    align-items: flex-start;
+    justify-content: space-around;
+    padding-left: 40px;
+}
+
+.ourClasses > .classes > h3{
+    color: var(--ds-title-color);
+    font-weight: lighter;
+    font-size: 2.1em;
+}
+
+.ourClasses > .classes > div > h4{
+    color: var(--ds-title-color);
+    font-weight: lighter;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.ourClasses > .classes > div > p {
+    color: var(--ds-text-color);
+    font-weight: lighter;
+    font-size: 0.7em;
+    margin-bottom: 5px;
+    
+}
+
+
+
+
+@media (max-width: 350px) {
+    .menu {
+        display: flex;
+        align-items: center;
+        margin-right: 25px;
+    }
+
+    header > nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 106px;
+        left: 0;
+        width: 100%;
+        background-color: var(--ds-background-secondary);
+    }
+
+    nav > ul {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    nav > ul > li {
+        padding: 10px;
+    }
+
+    .bePart > h2 {
+        width: 80% ;
+    }
+
+    .hero {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .hero > div:nth-child(1) {
+        order: 1;
+    }
+    .hero > div:nth-child(2) {
+        order: 2;
+    }
+    .hero > div:nth-child(3) {
+        order: 4;
+    }
+    .hero > div:nth-child(4) {
+        order: 3;
+    }
+    .hero > div:nth-child(5) {
+        order: 6;
+    }
+    .hero > div:nth-child(6) {
+        order: 5;
+    }
+    .hero > div:nth-child(7) {
+        order: 7;
+    }
+    .hero > div:nth-child(8) {
+        order: 8;
+    }
+
+    .logo > img {
+        max-height: 100px;
+    }
+
+    .aboutUs {
+        height: 100vh;        
+    }
+
+    .aboutUs > p {
+        width: 85%;
+        font-size: 0.5em;
+    }
+     
+    .ourClasses {
+        flex-direction: column;
+    } 
+
+    .ourClasses > div {
+        object-fit: cover;
+        overflow: hidden;
+    }
+    .ourClasses > .classes {
+        align-items: flex-start;
+        justify-content: space-around;
+        padding-left: 15px;
+
+    }
+
+    .ourClasses > .classes > h3{
+        font-size: 1.8em;
+    }
+
+    .ourClasses > .classes > div > h4{
+        font-size: 1em;
+    }
+    
+    .ourClasses > .classes > div > p {
+        font-size: 0.6em;
+        
+    }
+   
+
+
+}
+
+@media (min-width:350px) and (max-width: 750px) {
+    .menu {
+        display: flex;
+        align-items: center;
+        margin-right: 25px;
+    }
+
+    header > nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 106px;
+        left: 0;
+        width: 100%;
+        background-color: var(--ds-background-secondary);
+    }
+
+    nav > ul {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    nav > ul > li {
+        padding: 10px;
+    }
+
+    .bePart > h2 {
+        width: 50%;
+        font-size: 1.5em;
+       }
+
+    .hero > div > p {
+        font-size: 0.6em;
+    }
+
+    .logo > img {
+        max-height: 150px;
+    }
+
+    .aboutUs {
+        height: 80vh;        
+    }
+
+    .aboutUs > p {
+        width: 80%;
+        font-size: 0.6em;
+    }
+    
+    .ourClasses {
+        flex-direction: column;
+       }
+
+    
+}
+
+@media (min-width: 1200px) { 
+    .aboutUs > p {
+        width: 55%;
+    }
+
+}
