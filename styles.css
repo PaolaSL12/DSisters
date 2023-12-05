@@ -4,14 +4,6 @@
   box-sizing: border-box;
 }
 
-a {
-  text-decoration: none;
-  color: var(--ds-text-color);
-}
-
-ul {
-  list-style: none;
-}
 
 :root {
   --ds-color-1: #e1e1e1;
@@ -32,6 +24,23 @@ ul {
 
 body {
   background-color: var(--ds-background);
+}
+
+a {
+  text-decoration: none;
+  color: var(--ds-text-color);
+}
+
+ul {
+  list-style: none;
+}
+
+h1, h2, h3, h4 {
+  color: var(--ds-title-color);
+}
+
+p {
+  color: var(--ds-text-color);
 }
 
 header {
@@ -98,7 +107,6 @@ li > a:hover {
   text-align: center;
   font-size: 2em;
   font-weight: 300;
-  color: var(--ds-title-color);
 }
 
 .hero {
@@ -121,7 +129,6 @@ li > a:hover {
 
 .hero > div > p {
   font-weight: lighter;
-  color: var(--ds-text-color);
   text-align: center;
 }
 
@@ -148,7 +155,6 @@ li > a:hover {
   text-align: center;
 }
 .aboutUs > h2 {
-  color: var(--ds-title-color);
   font-size: 3.5em;
   font-weight: 300;
   text-align: center;
@@ -156,7 +162,6 @@ li > a:hover {
 }
 
 .aboutUs > p {
-  color: var(--ds-text-color);
   font-size: 0.9em;
   width: 70%;
   text-align: center;
@@ -194,20 +199,17 @@ li > a:hover {
 }
 
 .ourClasses > .classes > h3 {
-  color: var(--ds-title-color);
   font-weight: lighter;
   font-size: 2.1em;
 }
 
 .ourClasses > .classes > div > h4 {
-  color: var(--ds-title-color);
   font-weight: lighter;
   font-size: 1.2em;
   margin-bottom: 10px;
 }
 
 .ourClasses > .classes > div > p {
-  color: var(--ds-text-color);
   font-weight: lighter;
   font-size: 0.7em;
   margin-bottom: 5px;
@@ -227,7 +229,6 @@ li > a:hover {
   grid-column: 1/3;
   display: grid;
   align-items: center;
-  color: var(--ds-title-color);
   font-size: 3.5em;
   font-weight: 300;
   text-align: center;
@@ -248,7 +249,6 @@ li > a:hover {
 
 .shopItems > p {
   padding-left: 15px;
-  color: var(--ds-text-color);
   align-items: start;
 }
 
@@ -276,7 +276,6 @@ footer > h4 {
 }
 
 footer > div {
-  color: var(--ds-text-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -440,7 +439,7 @@ footer > div > a > img {
   }
 
   footer > h4 {
-    font-size: 1.2em;
+    font-size: 1em;
   }
 }
 
